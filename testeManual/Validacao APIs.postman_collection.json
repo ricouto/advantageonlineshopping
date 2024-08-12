@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "721f32c7-7326-4ff1-a83e-dcdc9a8e0433",
+		"name": "Validacao APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2824833",
+		"_collection_link": "https://planetary-zodiac-455230.postman.co/workspace/New-Team-Workspace~58d2298a-f275-4fbc-9042-fe6bed4893d3/collection/2824833-721f32c7-7326-4ff1-a83e-dcdc9a8e0433?action=share&source=collection_link&creator=2824833"
+	},
+	"item": [
+		{
+			"name": "pesquisa_produto_id15",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*\r",
+							"Script para validar somente o ID 15 e demais informacoes \r",
+							"como status, tempo, se retorna vazio e o contrato do responseBody\r",
+							"*/\r",
+							"const jsonData = pm.response.json();\r",
+							"var time = pm.response.responseTime\r",
+							"var productId = jsonData.productId\r",
+							"var status = pm.response.code\r",
+							"\r",
+							"pm.test(`TC01 - Retorna ID ${productId} com statuCode ${status} e responseTime em ${time} ms`, () => {\r",
+							"    pm.expect(pm.response.code).to.eql(200);\r",
+							"    pm.expect(jsonData.productId).to.be.a(\"number\")\r",
+							"    pm.expect(jsonData.categoryId).to.be.a(\"number\")\r",
+							"    pm.expect(jsonData.productName).to.be.a(\"string\")\r",
+							"    pm.expect(jsonData.price).to.be.a(\"number\")\r",
+							"    pm.expect(jsonData.description).to.be.a(\"string\")\r",
+							"    pm.expect(jsonData.imageUrl).to.be.a(\"string\")\r",
+							"    pm.expect(jsonData.attributes).to.be.an(\"array\")\r",
+							"    pm.expect(jsonData.colors).to.be.an(\"array\")\r",
+							"    pm.expect(jsonData.images).to.be.an(\"array\")\r",
+							"    pm.expect(jsonData.productStatus).to.be.a(\"string\")\r",
+							"    pm.expect(jsonData).to.be.not.empty\r",
+							"    pm.expect(jsonData.productId).to.eql(15)\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.advantageonlineshopping.com/catalog/api/v1/products/15",
+					"protocol": "https",
+					"host": [
+						"www",
+						"advantageonlineshopping",
+						"com"
+					],
+					"path": [
+						"catalog",
+						"api",
+						"v1",
+						"products",
+						"15"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

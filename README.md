@@ -29,3 +29,10 @@ Abaixo os itens que estão nesta suíte
 
 1. API - pesquisar.feature
 2. UI - buscar.feature
+
+## 📫 Suite Manual
+
+Abaixo os itens que estão nesta suíte
+
+1. API - Validacao APIs.postman_collection.json
+2. UI - 00 - README_testeManual.txt
