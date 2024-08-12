@@ -1,0 +1,36 @@
+{
+  "name": "advantageonlineshopping",
+  "version": "1.0.0",
+  "description": "Automacao para validar as funcionalidades do Advantage online shopping",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:test": "cypress run --headless --browser chrome --spec cypress/e2e/API/*.feature,cypress/e2e/UI/*.feature --config video=false"
+  },
+  "keywords": [
+    "Web",
+    "API",
+    "Advantage online shopping",
+    "Frontend",
+    "Backend",
+    "Cypress",
+    "Cucumber",
+    "BDD",
+    "Gherkin",
+    "Allure",
+    "reporter"
+  ],
+  "author": "Ricardo Macedo",
+  "license": "MIT",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "filterSpecs": true,
+    "omitFiltered": true
+  },
+  "devDependencies": {
+    "cypress": "^12.17.4"
+  },
+  "dependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  }
+}
