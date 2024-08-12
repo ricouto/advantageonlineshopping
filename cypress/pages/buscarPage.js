@@ -2,10 +2,6 @@ import elem from '../elements/homeEL'
 
 class buscarPage {
 
-    visitarPagina(webPath){
-        cy.visit(webPath)
-    };
-
     pesquisarProduto(){
         cy.get(elem.btnPesquisa()).click()
     };
@@ -17,7 +13,6 @@ class buscarPage {
     verificarProduto(nomePrdouto){
         cy.get(elem.nomeProduto).contains(nomePrdouto)
     };
-
 
 }   
 

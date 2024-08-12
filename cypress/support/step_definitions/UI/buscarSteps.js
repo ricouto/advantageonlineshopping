@@ -2,11 +2,12 @@
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
 import buscarPage from "../../../pages/buscarPage"
+import commomPage from "../../../pages/commomPage"
 
 const webPath = Cypress.env('baseUrl')
 
 Given('que estou na pagina inicial', () => {
-    buscarPage.visitarPagina(webPath)
+    commomPage.visitarPagina(webPath)
 })
 
 When('clico no botao de pesquisa', () => {

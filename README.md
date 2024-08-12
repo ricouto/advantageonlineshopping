@@ -1,6 +1,7 @@
 # Advantage online shopping 
 
-These instructions will allow you to get a working copy of the project on your local machine for development and testing purposes..
+Projeto de validaão da automação no Cypress.
+
 ## 💻 Pré-requisitos
 
 * [Node](https://nodejs.org/en/download/)
@@ -28,13 +29,11 @@ npm run cy:test
 Abaixo os itens que estão nesta suíte
 
 1. API - pesquisar.feature
-2. UI - buscar.feature
+2. UI - buscar.feature e carrinho.feature
 
 ## 📫 Suite Manual
 
-Abaixo os itens que estão nesta suíte
+Ma pasta ".testeManual" está a primeira para do Projeto
 
 1. API - Validacao APIs.postman_collection.json
 2. UI - 00 - README_testeManual.txt
-
-Acesse <a name=“.\advantageonlineshopping\testeManual”><a/> clicando aqui!

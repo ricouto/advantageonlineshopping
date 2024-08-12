@@ -16,9 +16,7 @@
     "Cypress",
     "Cucumber",
     "BDD",
-    "Gherkin",
-    "Allure",
-    "reporter"
+    "Gherkin"
   ],
   "author": "Ricardo Macedo",
   "license": "MIT",
